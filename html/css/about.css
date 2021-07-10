@@ -1,0 +1,51 @@
+@charset "utf-8";
+/* CSS Document */
+/*
+.gnav_ovelay ul li .sub_ballon{
+	display:block;
+}
+*/
+h3{
+	font-size:1.5rem;/* 24px相当 */
+	margin-bottom:1em;
+	background:#FFFFC8;
+	
+}
+
+.content{
+	outline:6px double rgba(0,0,0,0.1);
+	margin:0% 5% 10% 5%;
+}
+
+.content .imag_alia{
+	padding-top:5%;
+	padding-bottom:5%;
+}
+.ballonConst .imag_alia img{
+	object-fit:contain;
+}
+
+.content .text_alia {
+    width: 40%;
+    margin-right: 5%;
+    padding: 10% 0 10% 5%;
+}
+
+.text_alia dt{
+	font-size:1.25rem;
+}
+.text_alia dd{
+	padding-left:1em;
+	margin-bottom:1em;
+}
+
+/* レスポンシブ対応 ******************************************** */
+@media screen and (max-width: 767px){
+.content .text_alia {
+    width: 90%;
+		text-align:left;
+    margin-right: 0%;
+    padding: 10% 5% 10% 5%;
+}
+
+}

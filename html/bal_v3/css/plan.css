@@ -1,0 +1,109 @@
+	@charset "utf-8";
+
+.img_frame{
+	background: rgb(255,255,255);
+	box-shadow: -4px 3px rgba(194,174,148,0.7);
+}
+
+.img_frame:first-child{
+	width: 180px;
+	padding-left:3%;
+	transform:scale(1.2) rotate(-6deg);
+}
+
+.img_frame:first-child img{
+	max-height: 180px;
+}
+ .img_frame:last-child{
+	width: 67%;
+	margin: auto;
+	transform:  scale(1.2) rotate(3deg);
+}
+.img_frame:last-child img{
+	max-height: 200px;
+}
+.menu_Img_1{
+	transform: translate(1.5%) scale(0.9);	
+}
+.menu_Img_2{
+	transform: translate(3%) scale(0.9);
+}
+dl {
+	position: relative;
+	background-color: #FFFFC8;
+	width: 70%;
+	margin: 0 5%;
+	margin-bottom: 70px;
+	padding: 5px 10px;
+	line-height: 1;
+	border-radius: 4px;
+}
+
+.Experiences dl::before{
+	content:"";
+	position: absolute;
+	bottom: -50px;
+	left:105%;
+	height: 100px;
+	width: 100px;
+
+	background-image: url(../../images/common/men.jpeg);
+	background-size: contain;
+}
+.Experiences .women::before{
+	background-image: url(../../images/common/women.jpeg);
+}
+.Experiences dl::after{
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 100%;
+	height: 0;
+	width: 0;
+	border: 40px solid #FFFFC8;
+	border-top-color: transparent;
+	border-bottom: transparent;
+	border-right: none;
+	transform: rotate(15deg);
+	transform-origin: 0% 0%;
+}
+
+
+.Experiences dl:nth-of-type(2n) {
+	margin-left: 20%
+}
+.Experiences dl:nth-of-type(2n)::before{
+	left: -25%;
+}
+.Experiences dl:nth-of-type(2n)::after{
+	left: 0;
+	transform: rotateY(180deg);
+}
+
+.Experiences dt{
+	font-weight: 700;
+}
+.Experiences dd {
+	line-height: 1.5;
+}
+
+
+/* レスポンシブ対応 ******************************************** */
+
+
+
+@media screen and (max-width: 628px){
+.img_frame:first-child {
+	display:none;
+}
+.img_frame:last-child {
+	margin:10% auto;
+}
+.img_frame:first-child img{
+	display:none;		
+}
+.Experiences dl::before{
+	display: none;
+}
+
+}

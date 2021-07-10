@@ -1,0 +1,223 @@
+@charset "utf-8";
+/* CSS Document */
+/*
+.gnav_ovelay ul li .sub_gallery{
+	display:block;
+}
+*/
+/* 切り替え設定 */
+input{
+	display:none;
+}
+
+
+.btn1,.btn2,.btn3{
+	padding:3px 1%;
+	background:#999;
+	cursor:pointer;
+}
+
+/* r2_03の設定 */
+#test01:checked ~ .btn1{
+	background:rgb(255, 255, 0);
+}
+#test01:checked ~ .imag_alia .img_frame{
+	animation: roote_1 0.8s linear forwards;
+}
+#test01:checked ~ .imag_alia .img_frame .menu_Img_1 #r2_03{
+	opacity: 1;
+}
+/* r2_02の設定 */
+#test02:checked ~ .btn2{
+	background-color: rgb(255, 0, 255);
+}
+#test02:checked ~ .imag_alia .img_frame{
+	animation: roote_2 0.8s linear forwards;
+}
+
+#test02:checked ~ .imag_alia .img_frame .menu_Img_1 #r2_02{
+	opacity: 1;
+}
+/* r2_03の設定 */
+#test03:checked ~ .btn3{
+	background-color: rgb(0, 255, 255);
+}
+#test03:checked ~ .imag_alia .img_frame{
+	animation: roote_3 0.8s linear forwards;
+}
+#test03:checked ~ .imag_alia .img_frame .menu_Img_1 #r2_01{
+	opacity: 1;
+	background-color: rgb(0, 255, 255);
+}
+@keyframes roote_1{
+	0%{
+		transform: rotateX(0) rotateY(0);
+	}
+	100%{
+		transform:rotateX(5deg) rotateY(360deg);
+		background-color:rgb(255, 255, 0);
+	}
+}
+@keyframes roote_2{
+	0%{
+		transform:rotateX(0) rotateY(0);
+	}
+	100%{
+		transform: rotateX(5deg) rotateY(360deg);
+		background-color: rgb(255, 0, 255);
+	}
+}
+
+@keyframes roote_3{
+	0%{
+		transform: rotateX(0) rotateY(0);
+	}
+	100%{
+		transform: rotateX(5deg) rotateY(360deg);
+		background-color: rgb( 0,255, 255);
+	}
+}
+
+
+.menu_Img_1{
+	height: 100px;
+}
+.menu_Img_1 img{
+	position: absolute;
+	top: 10px;
+	left: 0;
+	opacity: 0;
+}
+
+
+.imag_alia{
+	display:flex;
+	flex-wrap:wrap;
+	margin:0 5%;
+	justify-content:center;
+	background:#FFF;
+	background-image: linear-gradient(#fafafa 98% , #aaa 10%);
+  background-size: 20px 50px;
+}
+/*
+.imag_alia{
+	position:absolute;
+	left:-100%;
+	width:calc(100% - 200px);
+}
+*/
+
+.imag_alia .img_frame{
+
+	width:29%;
+	height: 100%;
+	margin-right:5%;
+	margin-top:5%;
+	padding-bottom:5%;
+	background:#FFFFC8;
+	transform:rotate(5deg);
+	border:#666 solid 1px;
+	box-shadow: -4px 3px rgba(194,174,148,0.7);
+}
+
+/* ピンの設定 */
+.img_frame::before{
+	content:"";
+	display:block;
+	margin-left:45%;
+	margin-top:-15px;
+	height:25px;
+	width:25px;
+	background:#C96;
+	border-radius: 50%;
+	border: 1px solid #555;
+	z-index: 3000;
+}
+.imag_alia .img_frame img{
+	width:100%;
+	height:100px;
+	object-fit: cover;
+	transform: scale(0.9); 
+}
+
+.imag_alia .img_frame p:last-child{
+	background:#fff;
+}
+
+/* 1列目の設定 */
+.imag_alia .img_frame:nth-child(3n-2){
+	margin-right:5%;
+	margin-top:10%;
+}
+
+/* 2列目の設定 */
+.imag_alia .img_frame:nth-child(3n-1){
+	margin-right:5%;
+	margin-top:20%;
+}
+/* 3列目の設定 */
+.imag_alia .img_frame:nth-child(3n){
+	margin-right:0%;
+	margin-top:30%;
+}
+.imag_alia .img_frame:last-child{
+	margin-bottom:10%;
+}
+
+
+
+main > p {
+	margin-bottom:50px;
+}
+
+main > h2{
+	width: calc(100% - 100px);
+}
+
+
+
+/* レスポンシブ対応 ******************************************** */
+
+@media screen and (max-width: 767px){
+
+	main > h2 {
+		font-size: 2.5rem;
+	}
+	
+	.imag_alia{
+		justify-content:center;
+	}
+	
+	
+	.imag_alia .img_frame{
+		width:30%;
+		margin-right:5%;
+		margin-top:5%;
+		box-shadow: -4px 3px rgba(194,174,148,0.7);
+	}
+	/* 設定をリセット */
+	/* 1列目の設定 */
+	.imag_alia .img_frame:nth-child(3n-2){
+		margin-right:0%;
+		margin-top:0%;
+	}
+	
+	/* 2列目の設定 */
+	.imag_alia .img_frame:nth-child(3n-1){
+		margin-right:0%;
+		margin-top:0%;
+	}
+	/* 3列目の設定 */
+	.imag_alia .img_frame:nth-child(3n){
+		margin-right:0%;
+		margin-top:0%;
+	}
+	/* 2列の設定 ********************************* */
+	.imag_alia .img_frame:nth-child(2n+1){
+		margin-top:10%;
+		margin-right:5%;
+	}
+	.imag_alia .img_frame:nth-child(2n){
+		margin-top:20%;
+	}
+}

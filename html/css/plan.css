@@ -1,0 +1,141 @@
+	@charset "utf-8";
+/* CSS Document */
+/*
+.gnav_ovelay ul li .sub_plan{
+	display:block;
+}
+*/
+main{
+	text-align:center;
+	padding-bottom:5%;
+}
+.imag_alia{
+	position: relative;
+	
+}
+.img_frame{
+	position: absolute;
+	background: rgb(255,255,255);
+	box-shadow: -4px 3px rgba(194,174,148,0.7);
+}
+
+.img_frame:first-child{
+	z-index: 10;
+	width: 180px;
+	height:180px;
+	padding-left:3%;
+	top:0;
+	bottom:0;
+	right:0;
+	left:0;
+	transform:scale(1.2) rotate(-6deg);
+}
+
+.img_frame:first-child img{
+	max-height: 180px;
+}
+ .img_frame:last-child{
+	width: 67%;
+	 height: 40%;
+	top:0;
+	bottom:0;
+	right:0;
+	left:0;
+	 margin: auto;
+	transform:  scale(1.2) rotate(3deg);
+}
+.img_frame:last-child img{
+	height: 200px;
+}
+.menu_Img_1{
+	width:100%;
+	transform: translate(1.5%) scale(0.9);	
+}
+.menu_Img_2{
+	position: relative;
+	z-index: 5;
+	transform: translate(3%) scale(0.9);
+}
+
+
+/* レスポンシブ対応 ******************************************** */
+@media screen and (max-width: 767px){
+	
+	.img_frame:first-child{
+	z-index: 10;
+	width: 180px;
+	height:180px;
+	padding-left:3%;
+	top:0;
+	bottom:0;
+	right:0;
+	left:30px;
+	transform:scale(1.2) rotate(-6deg);
+}
+ .img_frame:last-child{
+	width: 67%;
+	height: 300px;
+	top:0;
+	bottom:20%;
+	right:0;
+	left:0;
+	 margin: auto;
+	transform:  scale(1.2) rotate(3deg);
+}
+.img_frame:last-child img{
+	height:300px; 
+}
+
+.content .imag_alia {
+    height: 400px;
+}
+}
+
+@media screen and (max-width: 628px){
+.content .imag_alia {
+    height: 300px;
+}
+.img_frame{
+		margin-top:10%;
+	}
+.img_frame:first-child{
+	z-index: 10;
+	width: 160px;
+	height:160px;
+	padding-left:3%;
+	top:0;
+	bottom:0;
+	right:0;
+	left:30px;
+	transform:scale(1.2) rotate(-6deg);
+}
+.img_frame:first-child img{
+	max-height: 160px;
+}
+ .img_frame:last-child{
+	width: 67%;
+	height: 200px;
+	top:0;
+	bottom:20%;
+	right:0;
+	left:0;
+	 margin: auto;
+	transform:  scale(1.2) rotate(3deg);
+}
+.img_frame:last-child img{
+	height:200px; 
+}
+
+
+}
+@media screen and (max-width: 628px){
+.img_frame:first-child {
+	display:none;
+}
+.img_frame:first-child img{
+	display:none;		
+}
+}
+
+
+}

@@ -1,0 +1,51 @@
+@charset "utf-8";
+/* CSS Document */
+.gnav_ovelay ul li .sub_contact{
+	display:block;
+}
+main {
+	text-align: center;
+}
+main > p > img{
+	object-position: 0% 49%;
+}
+.content .imag_alia{
+	width:80%;
+	margin-left:10%;
+	margin-right: 10%;
+	height:300px;
+}
+.content .imag_alia img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+.content .text_alia{
+	text-indent:1em;
+	width:80%;
+	margin-left:10%;
+	margin-right: 10%;
+	line-height:1.5;
+	letter-spacing: 0.1em;
+	text-align: center;
+}
+
+ main .pilotIntroduction .contents{
+	min-height: 500px;
+}
+.pilot01 img{
+	object-position: top;
+}
+
+/* レスポンシブ対応 ******************************************** */
+@media screen and (max-width: 767px){
+.content .imag_alia{
+	width:90%;
+	margin-left:5%;
+	margin-right:5%;
+	height:300px;
+}
+.content .text_alia{
+	text-align: left;
+}
+}
